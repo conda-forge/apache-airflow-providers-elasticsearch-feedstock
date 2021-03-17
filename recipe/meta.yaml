@@ -16,16 +16,14 @@ build:
 
 requirements:
   host:
-    - pip
     - python >=3.6
-    - setuptools
-    - wheel
+    - pip
   run:
+    - python >=3.6
     - apache-airflow >=2.0.0
     - elasticsearch >7,<7.6.0
     - elasticsearch-dbapi 0.1.0
     - elasticsearch-dsl >=5.0.0
-    - python >=3.6
 
 test:
   imports:
