@@ -40,6 +40,7 @@ Installing `apache-airflow-providers-elasticsearch` from the `conda-forge` chann
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `apache-airflow-providers-elasticsearch` can be installed with:
