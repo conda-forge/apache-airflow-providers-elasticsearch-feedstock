@@ -10,14 +10,15 @@ source:
   sha256: 4e91e965685f5da37bc5fac8f9749f2eb99bdca0e72151c7bee5986221ae0fae
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
     - python >=3.7
     - pip
+    - setuptools
   run:
     - python >=3.7
     - apache-airflow >=2.1.0
@@ -28,7 +29,7 @@ requirements:
 test:
   imports:
     - airflow.providers.elasticsearch
-    - airflow.providers.elasticsearch.hooks
+    - airflow.providers.elasticsearch.example_dags
   commands:
     - pip check
   requires:
@@ -36,9 +37,10 @@ test:
 
 about:
   home: https://airflow.apache.org/
-  summary: Provider for Elasticsearch for Apache Airflow
+  summary: Provider for Apache Airflow. Implements apache-airflow-providers-elasticsearch package
   license: Apache-2.0
   license_file: LICENSE
+  license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-elasticsearch/stable/index.html
   dev_url: https://github.com/apache/airflow/
 
