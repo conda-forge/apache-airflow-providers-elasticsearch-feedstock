@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-elasticsearch" %}
-{% set version = "3.0.2" %}
+{% set version = "3.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-elasticsearch-{{ version }}.tar.gz
-  sha256: 4e91e965685f5da37bc5fac8f9749f2eb99bdca0e72151c7bee5986221ae0fae
+  sha256: 0ab399b5f06c8d80731c0b720ddfe8fdbdde1eb6ccb059d0ce46425836075e67
 
 build:
   noarch: python
@@ -39,7 +39,9 @@ about:
   home: https://airflow.apache.org/
   summary: Provider for Apache Airflow. Implements apache-airflow-providers-elasticsearch package
   license: Apache-2.0
-  license_file: LICENSE
+  license_file:
+    - LICENSE
+    - NOTICE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-elasticsearch/stable/index.html
   dev_url: https://github.com/apache/airflow/
