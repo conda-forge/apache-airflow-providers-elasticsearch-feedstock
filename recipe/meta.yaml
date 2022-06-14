@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-elasticsearch" %}
-{% set version = "3.0.3" %}
+{% set version = "4.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-elasticsearch-{{ version }}.tar.gz
-  sha256: 0ab399b5f06c8d80731c0b720ddfe8fdbdde1eb6ccb059d0ce46425836075e67
+  sha256: 6299e5a0d54aaff6bb277871ee55133a32e7b60ac407a03cddce50830a521723
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - setuptools
   run:
     - python >=3.7
-    - apache-airflow >=2.1.0
+    - apache-airflow >=2.2.0
     - elasticsearch >7
     - elasticsearch-dbapi
     - elasticsearch-dsl >=5.0.0
@@ -29,7 +29,7 @@ requirements:
 test:
   imports:
     - airflow.providers.elasticsearch
-    - airflow.providers.elasticsearch.example_dags
+    - airflow.providers.elasticsearch.hooks
   commands:
     - pip check
   requires:
