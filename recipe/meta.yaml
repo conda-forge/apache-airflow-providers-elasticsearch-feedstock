@@ -21,7 +21,7 @@ requirements:
     - setuptools
   run:
     - python >=3.7
-    - apache-airflow >=2.1.0
+    - apache-airflow >=2.2.0
     - elasticsearch >7
     - elasticsearch-dbapi
     - elasticsearch-dsl >=5.0.0
@@ -29,7 +29,7 @@ requirements:
 test:
   imports:
     - airflow.providers.elasticsearch
-    - airflow.providers.elasticsearch.example_dags
+    - airflow.providers.elasticsearch.hooks
   commands:
     - pip check
   requires:
