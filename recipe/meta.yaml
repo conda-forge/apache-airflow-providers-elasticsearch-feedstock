@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-elasticsearch" %}
-{% set version = "4.0.0" %}
+{% set version = "4.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-elasticsearch-{{ version }}.tar.gz
-  sha256: 6299e5a0d54aaff6bb277871ee55133a32e7b60ac407a03cddce50830a521723
+  sha256: 3effa4d597806984d42b1829e257f478c720a16b8838c63fea495af0761fd8ba
 
 build:
   noarch: python
@@ -22,6 +22,7 @@ requirements:
   run:
     - python >=3.7
     - apache-airflow >=2.2.0
+    - apache-airflow-providers-common-sql
     - elasticsearch >7
     - elasticsearch-dbapi
     - elasticsearch-dsl >=5.0.0
