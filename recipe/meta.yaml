@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-elasticsearch" %}
-{% set version = "4.3.2" %}
+{% set version = "4.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-elasticsearch-{{ version }}.tar.gz
-  sha256: 7102c287f4b7fc435b2f40a8ee06de6674a1b2981993c82d56466a74cf6c3fff
+  sha256: b9704d003debd2a7833d5e27f08ea2911654a095a87483edcc45bc4d0526612b
 
 build:
   noarch: python
