@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_elasticsearch-{{ version }}.tar.gz
   sha256: d5e1dfdb7e142271ce2020d21da0c687575ea9b745f98fcc9062332467467a9c
 
 build:
@@ -16,8 +16,8 @@ build:
 
 requirements:
   host:
-    - python >=3.8
-    - setuptools >=67.2.0,<68.0.0
+    - python >=3.8,<4.dev0
+    - flit-core >=3.2,<4
     - pip
   run:
     - python >=3.8
@@ -27,8 +27,7 @@ requirements:
 
 test:
   imports:
-    - airflow.providers.elasticsearch
-    - airflow.providers.elasticsearch.hooks
+    - apache_airflow_providers_elasticsearch
   commands:
     - pip check
   requires:
@@ -36,11 +35,9 @@ test:
 
 about:
   home: https://airflow.apache.org/
-  summary: Provider for Apache Airflow. Implements apache-airflow-providers-elasticsearch package
+  summary: Provider package apache-airflow-providers-elasticsearch for Apache Airflow
   license: Apache-2.0
-  license_file:
-    - LICENSE
-    - NOTICE
+  license_file: airflow/providers/elasticsearch/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-elasticsearch/stable/index.html
   dev_url: https://github.com/apache/airflow/
