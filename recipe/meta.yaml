@@ -1,13 +1,13 @@
 {% set name = "apache-airflow-providers-elasticsearch" %}
-{% set version = "5.5.2" %}
+{% set version = "5.5.3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_elasticsearch-{{ version }}.tar.gz
-  sha256: 077b996f0dc6ce2567b25f75840d79d13418ac2b3169b9f509febd57edccad36
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_elasticsearch-{{ version }}.tar.gz
+  sha256: 03e62d93ed918c1c6ceb49edbdba4c22c5a8920808d1702a99f8d60a8c147b5b
 
 build:
   noarch: python
@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.9,<4.dev0
-    - flit-core >=3.2,<4
+    - python {{ python_min }}
+    - flit-core ==3.10.1
     - pip
   run:
-    - python >=3.9,<4.dev0
-    - apache-airflow-providers-common-sql >=1.17.0
+    - python >={{ python_min }}
+    - apache-airflow-providers-common-sql >=1.20.0
     - apache-airflow >=2.8.0
     - elasticsearch >=8.10,<9
 
@@ -31,6 +31,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
