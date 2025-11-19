@@ -1,6 +1,5 @@
 {% set name = "apache-airflow-providers-elasticsearch" %}
 {% set version = "6.3.5" %}
-{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -37,10 +36,12 @@ test:
     - pip
 
 about:
-  home: https://airflow.apache.org/
+  home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-elasticsearch for Apache Airflow
   license: Apache-2.0
-  license_file: src/airflow/providers/elasticsearch/LICENSE
+  license_file:
+    - LICENSE
+    - NOTICE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-elasticsearch/stable/index.html
   dev_url: https://github.com/apache/airflow/
