@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-elasticsearch
-  version: "6.4.3"
+  version: 6.4.4
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_elasticsearch-${{ version }}.tar.gz
-  sha256: 70ad9429c98420353b5ec1ff937966109605129c62da83d53e2921fd7969b0d8
+  sha256: 1d8e8c3aa392f66c088db6bf45b6b402917030c09b583c84ccdd3aee2493092c
 
 build:
   noarch: python
@@ -26,7 +26,6 @@ requirements:
     - apache-airflow-providers-common-compat >=1.12.0
     - apache-airflow-providers-common-sql >=1.27.0
     - elasticsearch >=8.10,<9
-
 tests:
   - python:
       imports:
