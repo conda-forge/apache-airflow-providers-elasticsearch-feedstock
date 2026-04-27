@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-elasticsearch
-  version: "6.5.2"
+  version: "6.5.3"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_elasticsearch-${{ version }}.tar.gz
-  sha256: 39e3907bf2713783993db764c3439f0384d37783c956cbf9912e67a4858681b2
+  sha256: b95b54b3fc5c4ac8ff15d3ce4e38f8e974661af5ad2731485e12d7aa157441f5
 
 build:
   noarch: python
